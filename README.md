@@ -1,4 +1,4 @@
-# Go2 + Piper 全身运动与地面拾取
+# Go2 + Piper 移动操作：全身运动与地面拾取
 
 [English](README.en.md)
 
@@ -14,6 +14,12 @@
 [S 型曲线](videos/04-s-curve.mp4) · [下蹲夹取](videos/03-ground-pick.mp4) · [走跑过渡](videos/05-walk-run-walk.mp4) · [原地转圈](videos/01-spin.mp4) · [目标跟随](videos/06-target-following.mp4) · [行走与转圈切换](videos/02-walk-spin-walk.mp4)
 
 本项目在 Isaac Lab 中控制搭载 Piper 机械臂的 Unitree Go2，覆盖原地转圈、行进与转圈切换、S 型跟踪、走跑过渡和地面拾取。行走使用强化学习策略，地面拾取的下蹲与夹取使用分阶段关节控制和末端反馈。
+
+## 上游来源与本项目工作
+
+- **上游基础**：整机 URDF 与网格来自 [RoboDuet Go2 + Piper](https://github.com/Sivan666666/roboduet_go2piper)，按固定版本生成仿真资产；`isaaclab_extension/roboduet_go2piper/` 移植并配置了 RoboDuet 的任务与机器人参数。本项目使用 [Isaac Lab](https://github.com/isaac-sim/IsaacLab) 和 RSL-RL 作为仿真与训练基础。
+- **步态和奖励设计**：在上述基础上，为移动目标跟踪与全身协同实现了步态相位、摆动足参考、旋转前馈及相关奖励，并针对足端滑动、身体稳定和末端误差进行调节。设计参考了 [Walk These Ways](https://github.com/Improbable-AI/walk-these-ways) 和 [Unitree RL Lab](https://github.com/unitreerobotics/unitree_rl_lab)，并非声称所有步态或奖励思想均为原创。相关实现见 [gait_reference.py](gait_reference.py)、[natural_task.py](natural_task.py) 和 [spin_task.py](spin_task.py)。
+- **任务与实验**：本项目组织了旋转、S 型运动、速度过渡和安装位置变化后的分阶段训练与评估；地面拾取结合行走策略、分阶段控制和逆运动学，并非端到端学习的自主抓取。资产转换、接触报告检查、测试数据和录像也在本仓库整理。
 
 ## 演示与结果
 

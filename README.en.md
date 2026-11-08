@@ -1,4 +1,4 @@
-# Go2 + Piper Whole-Body Locomotion and Ground Pickup
+# Go2 + Piper Mobile Manipulation: Whole-Body Locomotion and Ground Pickup
 
 [简体中文](README.md)
 
@@ -16,6 +16,12 @@
 [S-curve](videos/04-s-curve.mp4) · [Ground pickup](videos/03-ground-pick.mp4) · [Walk–run](videos/05-walk-run-walk.mp4) · [In-place turn](videos/01-spin.mp4) · [Target tracking](videos/06-target-following.mp4) · [Walk–turn–walk](videos/02-walk-spin-walk.mp4)
 
 This Isaac Lab project controls a Unitree Go2 carrying a Piper arm. It covers in-place turns, walking into and out of a turn, S-curve target tracking, walk-to-run transitions, and ground pickup. A learned policy controls the approach. Ground pickup combines staged joint control with end-effector feedback for crouching, grasping, and lifting.
+
+## Original contributions and upstream work
+
+- **Upstream foundations:** The combined robot URDF and meshes come from [RoboDuet Go2 + Piper](https://github.com/Sivan666666/roboduet_go2piper), pinned for asset generation. `isaaclab_extension/roboduet_go2piper/` ports and configures RoboDuet task and robot parameters. The project uses [Isaac Lab](https://github.com/isaac-sim/IsaacLab) and RSL-RL for simulation and training.
+- **Gait and reward design:** Building on these foundations, this project implements gait phase, swing-foot references, turning feedforward and associated rewards for moving-target tracking and whole-body coordination, with tuning for foot slip, body stability and end-effector error. The design draws on [Walk These Ways](https://github.com/Improbable-AI/walk-these-ways) and [Unitree RL Lab](https://github.com/unitreerobotics/unitree_rl_lab); the underlying gait and reward ideas are not all original. See [gait_reference.py](gait_reference.py), [natural_task.py](natural_task.py), and [spin_task.py](spin_task.py).
+- **Tasks and experiments:** This project organizes staged training and evaluation for turning, S-curve motion, speed transitions and the updated arm mount. Ground pickup combines a locomotion policy, staged control and inverse kinematics; it is not end-to-end learned autonomous grasping. Asset conversion, contact-report checks, experiment data and recordings are also provided.
 
 ## Demos and results
 
