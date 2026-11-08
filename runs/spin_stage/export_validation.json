@@ -1,0 +1,8 @@
+{
+  "input_dimension": 92,
+  "output_dimension": 18,
+  "random_cases": 256,
+  "max_absolute_difference": 0.0,
+  "all_outputs_finite": true,
+  "passed": true
+}

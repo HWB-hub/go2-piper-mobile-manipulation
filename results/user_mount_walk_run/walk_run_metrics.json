@@ -1,0 +1,82 @@
+{
+  "walk": {
+    "forward_speed_mean_m_s": 0.2773287296295166,
+    "forward_speed_p95_m_s": 0.318685919046402,
+    "support_fraction": [
+      0.6411338448524475,
+      0.6397480368614197,
+      0.5881574749946594,
+      0.6458582878112793
+    ],
+    "flight_fraction": 0.0,
+    "episodes_with_flight": 0,
+    "episodes_with_single_sample_flight": 0,
+    "uses_instant_contact": true,
+    "reference_frequency_hz": 1.90172278881073,
+    "valid_samples": 15875
+  },
+  "accelerate": {
+    "forward_speed_mean_m_s": 1.0047590732574463,
+    "forward_speed_p95_m_s": 1.7866960763931274,
+    "support_fraction": [
+      0.5073700547218323,
+      0.5053228139877319,
+      0.49111810326576233,
+      0.5215433239936829
+    ],
+    "flight_fraction": 0.0010708661417322834,
+    "episodes_with_flight": 12,
+    "episodes_with_single_sample_flight": 119,
+    "uses_instant_contact": true,
+    "reference_frequency_hz": 2.583775281906128,
+    "valid_samples": 31750
+  },
+  "run": {
+    "forward_speed_mean_m_s": 1.7232331037521362,
+    "forward_speed_p95_m_s": 1.9636280536651611,
+    "support_fraction": [
+      0.39049869775772095,
+      0.3965529203414917,
+      0.4061592221260071,
+      0.42500436305999756
+    ],
+    "flight_fraction": 0.004164479440069991,
+    "episodes_with_flight": 22,
+    "episodes_with_single_sample_flight": 122,
+    "uses_instant_contact": true,
+    "reference_frequency_hz": 3.2133021354675293,
+    "valid_samples": 57150
+  },
+  "decelerate": {
+    "forward_speed_mean_m_s": 0.9970356822013855,
+    "forward_speed_p95_m_s": 1.7819575071334839,
+    "support_fraction": [
+      0.49653542041778564,
+      0.5514645576477051,
+      0.5045039653778076,
+      0.5160945057868958
+    ],
+    "flight_fraction": 0.00031496062992125983,
+    "episodes_with_flight": 5,
+    "episodes_with_single_sample_flight": 103,
+    "uses_instant_contact": true,
+    "reference_frequency_hz": 2.617017984390259,
+    "valid_samples": 31750
+  },
+  "walk_again": {
+    "forward_speed_mean_m_s": 0.2795480191707611,
+    "forward_speed_p95_m_s": 0.3229382634162903,
+    "support_fraction": [
+      0.6336308121681213,
+      0.6550655961036682,
+      0.6046019196510315,
+      0.6395275592803955
+    ],
+    "flight_fraction": 0.0,
+    "episodes_with_flight": 0,
+    "episodes_with_single_sample_flight": 0,
+    "uses_instant_contact": true,
+    "reference_frequency_hz": 1.9011898040771484,
+    "valid_samples": 57150
+  }
+}

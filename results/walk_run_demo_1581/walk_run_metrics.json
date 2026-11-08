@@ -1,0 +1,82 @@
+{
+  "walk": {
+    "forward_speed_mean_m_s": 0.2793872654438019,
+    "forward_speed_p95_m_s": 0.2918759882450104,
+    "support_fraction": [
+      0.6399999856948853,
+      0.6800000071525574,
+      0.5600000023841858,
+      0.671999990940094
+    ],
+    "flight_fraction": 0.0,
+    "episodes_with_flight": 0,
+    "episodes_with_single_sample_flight": 0,
+    "uses_instant_contact": true,
+    "reference_frequency_hz": 1.909762978553772,
+    "valid_samples": 125
+  },
+  "accelerate": {
+    "forward_speed_mean_m_s": 1.035201072692871,
+    "forward_speed_p95_m_s": 1.7800312042236328,
+    "support_fraction": [
+      0.47200000286102295,
+      0.5440000295639038,
+      0.4560000002384186,
+      0.5400000214576721
+    ],
+    "flight_fraction": 0.0,
+    "episodes_with_flight": 0,
+    "episodes_with_single_sample_flight": 1,
+    "uses_instant_contact": true,
+    "reference_frequency_hz": 2.6226558685302734,
+    "valid_samples": 250
+  },
+  "run": {
+    "forward_speed_mean_m_s": 1.7791869640350342,
+    "forward_speed_p95_m_s": 1.871237874031067,
+    "support_fraction": [
+      0.3822222352027893,
+      0.41333332657814026,
+      0.371111124753952,
+      0.4444444477558136
+    ],
+    "flight_fraction": 0.0,
+    "episodes_with_flight": 0,
+    "episodes_with_single_sample_flight": 1,
+    "uses_instant_contact": true,
+    "reference_frequency_hz": 3.25,
+    "valid_samples": 450
+  },
+  "decelerate": {
+    "forward_speed_mean_m_s": 1.024307370185852,
+    "forward_speed_p95_m_s": 1.7943507432937622,
+    "support_fraction": [
+      0.46399998664855957,
+      0.5839999914169312,
+      0.48399999737739563,
+      0.527999997138977
+    ],
+    "flight_fraction": 0.0,
+    "episodes_with_flight": 0,
+    "episodes_with_single_sample_flight": 1,
+    "uses_instant_contact": true,
+    "reference_frequency_hz": 2.6510980129241943,
+    "valid_samples": 250
+  },
+  "walk_again": {
+    "forward_speed_mean_m_s": 0.27982643246650696,
+    "forward_speed_p95_m_s": 0.2915940284729004,
+    "support_fraction": [
+      0.6133333444595337,
+      0.7066666483879089,
+      0.5844444632530212,
+      0.648888885974884
+    ],
+    "flight_fraction": 0.0,
+    "episodes_with_flight": 0,
+    "episodes_with_single_sample_flight": 0,
+    "uses_instant_contact": true,
+    "reference_frequency_hz": 1.9092649221420288,
+    "valid_samples": 450
+  }
+}

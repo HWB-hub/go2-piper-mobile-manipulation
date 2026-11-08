@@ -1,0 +1,4 @@
+# Versions observed in the original Windows environment, not a standalone installer.
+# Set up Isaac Sim and Isaac Lab first. Do not pip install over that environment.
+torch==2.11.0
+rsl-rl-lib==5.0.1

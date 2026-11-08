@@ -1,0 +1,72 @@
+{
+  "walk": {
+    "forward_speed_mean_m_s": 0.2783298194408417,
+    "forward_speed_p95_m_s": 0.31565061211586,
+    "support_fraction": [
+      0.7105000019073486,
+      0.7298750281333923,
+      0.6581875085830688,
+      0.7265625
+    ],
+    "flight_fraction": 0.0,
+    "episodes_with_flight": 0,
+    "reference_frequency_hz": 1.8940739631652832,
+    "valid_samples": 16000
+  },
+  "accelerate": {
+    "forward_speed_mean_m_s": 0.8871454000473022,
+    "forward_speed_p95_m_s": 1.472121238708496,
+    "support_fraction": [
+      0.6417584419250488,
+      0.7282148003578186,
+      0.5666753649711609,
+      0.6676008701324463
+    ],
+    "flight_fraction": 0.0,
+    "episodes_with_flight": 0,
+    "reference_frequency_hz": 2.566840648651123,
+    "valid_samples": 30686
+  },
+  "run": {
+    "forward_speed_mean_m_s": 1.489513635635376,
+    "forward_speed_p95_m_s": 1.7287617921829224,
+    "support_fraction": [
+      0.6168119311332703,
+      0.810444176197052,
+      0.5843407511711121,
+      0.6111891865730286
+    ],
+    "flight_fraction": 0.000281135788585887,
+    "episodes_with_flight": 2,
+    "reference_frequency_hz": 3.25,
+    "valid_samples": 14228
+  },
+  "decelerate": {
+    "forward_speed_mean_m_s": 1.0326452255249023,
+    "forward_speed_p95_m_s": 1.6661587953567505,
+    "support_fraction": [
+      0.63811856508255,
+      0.7425231337547302,
+      0.6587819457054138,
+      0.6609570384025574
+    ],
+    "flight_fraction": 0.0,
+    "episodes_with_flight": 0,
+    "reference_frequency_hz": 2.8602921962738037,
+    "valid_samples": 3678
+  },
+  "walk_again": {
+    "forward_speed_mean_m_s": 0.27954113483428955,
+    "forward_speed_p95_m_s": 0.30890509486198425,
+    "support_fraction": [
+      0.7136508226394653,
+      0.7350793480873108,
+      0.6909523606300354,
+      0.7060317397117615
+    ],
+    "flight_fraction": 0.0,
+    "episodes_with_flight": 0,
+    "reference_frequency_hz": 1.8922975063323975,
+    "valid_samples": 6300
+  }
+}

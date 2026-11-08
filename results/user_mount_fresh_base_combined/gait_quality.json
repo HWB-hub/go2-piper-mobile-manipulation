@@ -1,0 +1,119 @@
+{
+  "tracking": {
+    "moving_samples": 197524,
+    "four_feet_contact_fraction": 0.3546151353759543,
+    "contact_duty_per_foot": [
+      0.7078279095198559,
+      0.7414035762742756,
+      0.6885694902897875,
+      0.7141613171057695
+    ],
+    "support_over_0_7s_fraction": 0.00010251918754176708,
+    "support_time_p95_s": 0.33994293212890625,
+    "completed_lifts_per_foot": [
+      7086,
+      6951,
+      6914,
+      7122
+    ],
+    "lift_frequency_per_foot_hz": [
+      1.7891771684906703,
+      1.7484314000252452,
+      1.738994629363587,
+      1.8020531540523432
+    ],
+    "episodes_with_8s_valid_motion": 127,
+    "all_feet_over_1hz_fraction": 0.9921259842519685,
+    "weakest_foot_lift_rate_p10_hz": 1.5310639661365668,
+    "mean_lift_peak_per_foot_m": [
+      0.041133286022943125,
+      0.0403115527888988,
+      0.04148805634239039,
+      0.0395686415491463
+    ],
+    "mean_swing_duration_per_foot_s": [
+      0.15760654812305955,
+      0.14258092360811397,
+      0.17122649696268444,
+      0.15426003931479923
+    ],
+    "mean_pre_touchdown_foot_speed_m_s": [
+      0.7346242221606979,
+      0.8072501149362428,
+      0.6637437243138095,
+      0.8400020040163697
+    ],
+    "yaw_tracking_rmse_rad_s": 0.23322512209415436,
+    "yaw_acceleration_rms_rad_s2": 2.5720369815826416
+  },
+  "spin_window": {
+    "moving_samples": 65800,
+    "four_feet_contact_fraction": 0.3584802431610942,
+    "contact_duty_per_foot": [
+      0.7169908814589666,
+      0.7399696048632218,
+      0.6883890577507599,
+      0.7232066869300912
+    ],
+    "support_over_0_7s_fraction": 0.0,
+    "support_time_p95_s": 0.3400077819824219,
+    "completed_lifts_per_foot": [
+      2347,
+      2343,
+      2338,
+      2349
+    ],
+    "lift_frequency_per_foot_hz": [
+      1.7834346504559266,
+      1.7803951367781152,
+      1.7765957446808511,
+      1.7849544072948325
+    ],
+    "episodes_with_8s_valid_motion": 94,
+    "all_feet_over_1hz_fraction": 1.0,
+    "weakest_foot_lift_rate_p10_hz": 1.7142857142857142,
+    "mean_lift_peak_per_foot_m": [
+      0.03988858480300099,
+      0.03912822377513832,
+      0.03867619506332791,
+      0.036888947191011046
+    ],
+    "mean_swing_duration_per_foot_s": [
+      0.15784405624201106,
+      0.14449850618864704,
+      0.17320786997433701,
+      0.15440613026819924
+    ],
+    "mean_pre_touchdown_foot_speed_m_s": [
+      0.6960357919646467,
+      0.7134225162567361,
+      0.6094982264208121,
+      0.7569232188155672
+    ],
+    "yaw_tracking_rmse_rad_s": 0.15602846443653107,
+    "yaw_acceleration_rms_rad_s2": 2.5068769454956055,
+    "world_yaw_reference_rmse_rad_s": 0.09594334280928714,
+    "by_direction": {
+      "clockwise": {
+        "episodes": 44,
+        "lift_frequency_per_foot_hz": [
+          1.787337662337663,
+          1.780844155844156,
+          1.7775974025974028,
+          1.787337662337663
+        ],
+        "all_feet_over_1hz_fraction": 1.0
+      },
+      "counterclockwise": {
+        "episodes": 50,
+        "lift_frequency_per_foot_hz": [
+          1.7800000000000011,
+          1.780000000000001,
+          1.7757142857142865,
+          1.7828571428571438
+        ],
+        "all_feet_over_1hz_fraction": 1.0
+      }
+    }
+  }
+}

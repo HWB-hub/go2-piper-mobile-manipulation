@@ -1,0 +1,130 @@
+{
+  "note": "每条记录对应一次真实训练，参数取自 runs/<id>/invocation.json。mount 表示该阶段训练时使用的安装座几何（original = 上游 URDF 原样，lowered = 安装座下沉版）。",
+  "defaults": {
+    "profile": "adaptive",
+    "num_envs": 512,
+    "duration": 38.0
+  },
+  "stages": [
+    {
+      "id": "natural_stage",
+      "parent": "spin_stage",
+      "pattern": "combined",
+      "iterations": 800,
+      "seed": 211,
+      "learning_rate": 0.0001,
+      "recipe": "natural",
+      "mount": "original",
+      "elapsed_min": 28,
+      "note": "第一阶段：改用分相位步态奖励（natural 配方），从旧旋转策略继续"
+    },
+    {
+      "id": "natural_refine",
+      "parent": "natural_stage",
+      "pattern": "combined",
+      "iterations": 600,
+      "seed": 221,
+      "learning_rate": 0.00006,
+      "recipe": "natural",
+      "mount": "original",
+      "elapsed_min": 42,
+      "note": "第二阶段：脚步参考改用世界轨迹前馈，加强最弱腿高度与落地冲击约束"
+    },
+    {
+      "id": "natural_coordination",
+      "parent": "natural_refine",
+      "pattern": "combined",
+      "iterations": 400,
+      "seed": 241,
+      "learning_rate": 0.00004,
+      "recipe": "natural",
+      "mount": "original",
+      "elapsed_min": 15,
+      "note": "第三阶段：低学习率协调，tcp_precision 权重恢复到 6"
+    },
+    {
+      "id": "natural_balance",
+      "parent": "natural_coordination",
+      "pattern": "combined",
+      "iterations": 800,
+      "seed": 261,
+      "learning_rate": 0.00006,
+      "recipe": "natural",
+      "mount": "original",
+      "elapsed_min": 33,
+      "note": "第四阶段：收紧低速速度跟踪、加重末端距离惩罚，曲线训练占比提到 60%"
+    },
+    {
+      "id": "stability_v1",
+      "parent": "natural_balance",
+      "pattern": "combined",
+      "iterations": 800,
+      "seed": 311,
+      "learning_rate": 0.00004,
+      "recipe": "stability",
+      "mount": "original",
+      "elapsed_min": 29,
+      "note": "稳定性配方起点：机身水平/终止/角速度惩罚加重"
+    },
+    {
+      "id": "stability_v8",
+      "parent": "stability_v1",
+      "pattern": "combined",
+      "iterations": 1000,
+      "seed": 381,
+      "learning_rate": 0.000025,
+      "recipe": "stability_support",
+      "mount": "original",
+      "elapsed_min": 39,
+      "note": "通用模型（runs/stability_v8）：支撑期速度惩罚 -5、超速惩罚 -25"
+    },
+    {
+      "id": "s_curve_v1",
+      "parent": "stability_v8",
+      "pattern": "serpentine",
+      "iterations": 650,
+      "seed": 481,
+      "learning_rate": 0.000025,
+      "recipe": "stability_support",
+      "mount": "original",
+      "elapsed_min": 24,
+      "note": "S 型专项（runs/s_curve_v1）：只走蛇形曲线，加严偏航平滑与动作二阶差分"
+    },
+    {
+      "id": "walk_run_v1",
+      "parent": "s_curve_v1",
+      "pattern": "walk_run",
+      "iterations": 1000,
+      "seed": 581,
+      "learning_rate": 0.00005,
+      "recipe": "natural",
+      "mount": "original",
+      "elapsed_min": 37,
+      "note": "走跑过渡第一级：速度指令上限 2.15 m/s，running_gait 打开"
+    },
+    {
+      "id": "walk_run_v3",
+      "parent": "walk_run_v1",
+      "pattern": "walk_run",
+      "iterations": 1000,
+      "seed": 601,
+      "learning_rate": 0.00004,
+      "recipe": "natural",
+      "mount": "original",
+      "elapsed_min": 36,
+      "note": "走跑专项（runs/walk_run_v3）"
+    },
+    {
+      "id": "user_mount_adapt_v8",
+      "parent": "stability_v8",
+      "pattern": "combined",
+      "iterations": 600,
+      "seed": 691,
+      "learning_rate": 0.00002,
+      "recipe": "stability_support",
+      "mount": "lowered",
+      "elapsed_min": 21,
+      "note": "安装座下沉后的适配（runs/user_mount_adapt_v8），必须用 lowered 资产"
+    }
+  ]
+}
